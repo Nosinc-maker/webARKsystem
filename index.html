@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARK SYSTEMS</title>
+  <style>
+    :root {
+      --bg: #000000;
+      --card: #0a0d12;
+      --border: #1b2432;
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --grad-a: #38bdf8;
+      --grad-b: #6366f1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background:
+        radial-gradient(circle at 15% 20%, rgba(56, 189, 248, 0.16), transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(99, 102, 241, 0.16), transparent 45%),
+        var(--bg);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 2rem;
+    }
+
+    .container {
+      max-width: 920px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .logo-mark {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      font-size: 1.05rem;
+    }
+
+    .prompt-icon {
+      display: inline-grid;
+      place-items: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--grad-a), var(--grad-b));
+      color: #000000;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-weight: 900;
+      font-size: 0.95rem;
+    }
+
+    .brand-text {
+      background: linear-gradient(90deg, var(--grad-a), var(--grad-b));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .domain-pill {
+      font-size: 0.82rem;
+      color: #cbd5e1;
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+    }
+
+    main {
+      padding: 3.5rem 0 2rem;
+    }
+
+    h1 {
+      font-size: clamp(2.1rem, 5vw, 3.3rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--grad-a), var(--grad-b));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .lead {
+      color: var(--muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      max-width: 60ch;
+      margin-bottom: 2.25rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 1.35rem;
+    }
+
+    .card h2 {
+      font-size: 1rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo-mark">
+        <span class="prompt-icon">&gt;_</span>
+        <span class="brand-text">ARK SYSTEMS</span>
+      </div>
+      <div class="domain-pill">arksystem.dpdns.org</div>
+    </header>
+
+    <main>
+      <h1>Infraestructura y <span>sistemas web</span></h1>
+      <p class="lead">
+        Página estática desplegada en Netlify para práctica de clase y vinculación de dominio
+        con <strong>arksystem.dpdns.org</strong>.
+      </p>
+
+      <div class="cards">
+        <section class="card">
+          <h2>Despliegue rápido</h2>
+          <p>Archivo HTML5 y CSS3 servido de forma directa sin servidor intermedio.</p>
+        </section>
+        <section class="card">
+          <h2>Dominio y DNS</h2>
+          <p>Resolución configurada para apuntar el dominio hacia el alojamiento activo.</p>
+        </section>
+        <section class="card">
+          <h2>Entrega lista</h2>
+          <p>URL pública disponible al instante para comprobar y compartir en clase.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <span>ARK SYSTEMS</span>
+      <span>arksystem.dpdns.org</span>
+    </footer>
+  </div>
+</body>
+</html>
